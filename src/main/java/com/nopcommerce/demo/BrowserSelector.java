@@ -24,7 +24,7 @@ public class BrowserSelector<cat> extends Utils {
 
 
         String browser = loadProperty.getProperty("browser");
-        String sauceLab = loadProperty.getProperty("saucelab");
+        String sauceLab = loadProperty.getProperty("sauceLab");
 
 
         if (sauceLab.equalsIgnoreCase("saucelab")) {
@@ -79,4 +79,3 @@ public class BrowserSelector<cat> extends Utils {
             }
         }
     }
-}
