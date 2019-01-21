@@ -8,7 +8,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
-import java.util.concurrent.TimeUnit;
 
 public class BaseTest extends Utils {
 
@@ -17,18 +16,18 @@ public class BaseTest extends Utils {
     @BeforeMethod
     public void openBrowser() throws Exception{
 
-        browserSelector.browserSelect();
+        browserSelector.browserSetUp();
 
 //        System.setProperty("webdriver.chrome.driver", "src\\BrowserDriver\\chromedriver.exe");
 //        driver = new ChromeDriver();
 
         // Implicitly Wait for Driver
-        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+      //  driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 
         //Maximising Browser
-        driver.manage().window().fullscreen();
+      //  driver.manage().window().fullscreen();
 
-        driver.manage().deleteAllCookies();
+       // driver.manage().deleteAllCookies();
 
         //Opening Url
       //  driver.get("https://demo.nopcommerce.com/");
